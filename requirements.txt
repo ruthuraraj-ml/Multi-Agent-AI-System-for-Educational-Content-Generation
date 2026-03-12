@@ -1,0 +1,16 @@
+# Web Interface
+streamlit>=1.55.0
+
+# AI Orchestration (These handle Groq and LiteLLM internally)
+crewai>=1.10.0
+langchain>=0.3.0
+langchain-groq>=1.1.0
+
+# Vector Database & Embeddings
+chromadb>=0.5.5
+sentence-transformers>=5.2.0
+
+# Utilities
+langchain-text-splitters>=1.1.0
+huggingface_hub>=0.28.0
+python-dotenv>=1.0.1

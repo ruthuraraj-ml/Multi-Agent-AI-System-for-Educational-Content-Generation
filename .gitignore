@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Streamlit cache
+.streamlit/
+
+# Generated images
+diagram_*.png
+generated_images/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/

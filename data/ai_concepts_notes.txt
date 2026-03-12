@@ -1,0 +1,59 @@
+Machine Learning
+Machine Learning is a field of artificial intelligence where computers learn patterns from data rather than being explicitly programmed. Common types include supervised learning, unsupervised learning and reinforcement learning. ML systems improve automatically through experience and are widely used in recommendation engines, fraud detection, medical diagnosis and autonomous vehicles.
+
+Supervised Learning
+Supervised learning trains a model on labeled input-output pairs. The model learns a mapping function so it can predict outputs for new unseen inputs. Common algorithms include linear regression, logistic regression, support vector machines, decision trees and gradient boosting. Applications include spam detection, image classification, sentiment analysis and price prediction.
+
+Unsupervised Learning
+Unsupervised learning discovers hidden structure in unlabeled data. The model is not guided by known outputs and must find patterns on its own. Common techniques include clustering with K-Means or DBSCAN, dimensionality reduction with PCA or t-SNE, and anomaly detection. Applications include customer segmentation, topic modeling and data compression.
+
+Reinforcement Learning
+Reinforcement Learning is a machine learning approach where an agent learns by interacting with an environment. The agent receives rewards for good actions and penalties for bad actions. Over time the agent learns a policy that maximizes cumulative rewards. Key concepts include the state space, action space, reward signal, value function and Q-learning. Deep reinforcement learning combines neural networks with RL to solve complex tasks like playing games, robot locomotion and resource scheduling.
+
+Neural Networks
+Neural networks are computational models inspired by the human brain. They consist of layers of artificial neurons called perceptrons that process information by applying weighted sums and activation functions. Deep learning uses neural networks with many hidden layers to learn hierarchical representations of raw data. Neural networks are the foundation for most modern AI breakthroughs in image recognition, speech synthesis, language understanding and protein structure prediction.
+
+Convolutional Neural Networks
+Convolutional Neural Networks (CNNs) are specialized neural architectures designed for processing grid-like data such as images. They use convolutional filters to detect local features like edges, textures and shapes. Pooling layers reduce spatial dimensions while retaining important information. CNNs power systems for object detection, facial recognition, medical imaging and autonomous driving.
+
+Recurrent Neural Networks
+Recurrent Neural Networks (RNNs) are neural architectures designed to handle sequential data by maintaining a hidden state that captures context from previous steps. Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) variants solve the vanishing gradient problem and are used in time-series forecasting, machine translation and speech recognition.
+
+Transformers
+Transformers are deep learning architectures that have revolutionized natural language processing and beyond. They rely on self-attention mechanisms that allow every token in a sequence to attend to every other token simultaneously, capturing long-range dependencies more efficiently than RNNs. The original Transformer introduced an encoder-decoder structure. Modern variants include encoder-only models like BERT for understanding tasks and decoder-only models like GPT for generation tasks.
+
+Attention Mechanism
+The attention mechanism allows neural networks to focus on the most relevant parts of the input when producing an output. Scaled dot-product attention computes a weighted sum of values where weights are determined by the compatibility between queries and keys. Multi-head attention runs several attention operations in parallel and concatenates results, letting the model jointly attend to information from different representation subspaces.
+
+Transfer Learning
+Transfer learning is a technique where a model trained on one large task is fine-tuned for a different but related task. Pre-trained models capture rich general representations that can be adapted with far less data and compute than training from scratch. Fine-tuning on task-specific datasets allows practitioners to build high-performing models quickly. BERT fine-tuning for classification and GPT fine-tuning for chatbots are classic examples.
+
+Embeddings
+Embeddings are dense vector representations of discrete objects such as words, sentences, images or graph nodes. They map high-dimensional sparse inputs into a continuous lower-dimensional space where semantically similar items are geometrically close. Word2Vec, GloVe and FastText are early word embedding methods. Sentence transformers produce contextual sentence-level embeddings used in semantic search and retrieval-augmented generation.
+
+Overfitting and Regularization
+Overfitting occurs when a model learns the training data too well and fails to generalize to new data. Regularization techniques combat overfitting by constraining model complexity. L1 regularization promotes sparsity, L2 regularization penalizes large weights, dropout randomly disables neurons during training, and early stopping halts training when validation performance degrades.
+
+Bias and Variance Tradeoff
+The bias-variance tradeoff describes the tension between two sources of prediction error. High bias means the model is too simple and underfits the data. High variance means the model is too complex and overfits the data. The goal is to find a sweet spot with low bias and low variance. Techniques like cross-validation, ensemble methods and regularization help manage this tradeoff.
+
+Feature Engineering
+Feature engineering is the process of using domain knowledge to create, transform or select input variables that make machine learning algorithms work better. Good features can dramatically improve model performance and interpretability. Techniques include normalization, one-hot encoding, polynomial features, log transforms, interaction terms and time-based feature extraction.
+
+Model Evaluation Metrics
+Choosing the right evaluation metric is critical. Accuracy measures the fraction of correct predictions but is misleading for imbalanced datasets. Precision measures the fraction of positive predictions that are correct. Recall measures the fraction of actual positives identified. F1-score is the harmonic mean of precision and recall. AUC-ROC measures discrimination ability. Mean Absolute Error and Root Mean Squared Error are used for regression tasks.
+
+Gradient Descent
+Gradient descent is the optimization algorithm used to train most neural networks. It iteratively updates model parameters in the direction that reduces the loss function. Stochastic Gradient Descent updates parameters after each training example. Mini-batch gradient descent uses small batches for efficiency. Adaptive optimizers like Adam combine momentum and per-parameter learning rates for faster and more stable convergence.
+
+Hyperparameter Tuning
+Hyperparameters are configuration settings not learned during training, such as learning rate, number of layers, batch size and regularization strength. Tuning these parameters significantly impacts model performance. Methods include manual search, grid search, random search and Bayesian optimization. AutoML systems can automate hyperparameter tuning, neural architecture search and feature selection.
+
+Data Augmentation
+Data augmentation artificially expands the training dataset by applying transformations to existing samples. For images this includes rotation, flipping, cropping, color jitter and cutout. For text it includes synonym replacement, back-translation and paraphrase generation. Augmentation reduces overfitting and improves model robustness especially when labeled data is scarce.
+
+Federated Learning
+Federated learning is a privacy-preserving machine learning approach where the model is trained across many decentralized devices without sharing raw data. Each device trains a local model and only shares model updates with a central server that aggregates them. This is used in mobile keyboard prediction, healthcare data sharing and financial fraud detection while preserving user privacy.
+
+Explainability and Interpretability
+AI explainability refers to methods that make model decisions understandable to humans. LIME creates local linear approximations to explain individual predictions. SHAP uses game theory to attribute prediction contributions to each feature. Saliency maps highlight which input pixels influence image classifier decisions. Explainability is critical for deploying AI in high-stakes domains like medicine, finance and law.

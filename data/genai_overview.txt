@@ -1,0 +1,59 @@
+Generative AI
+Generative AI refers to artificial intelligence systems that can produce new content such as text, images, audio, video, code and 3D assets. Unlike discriminative models that classify or predict, generative models learn the underlying distribution of training data and can sample novel instances from it. The field has seen explosive growth with the emergence of large language models, diffusion models and multimodal systems.
+
+Large Language Models
+Large Language Models (LLMs) are neural networks with billions of parameters trained on massive text corpora using self-supervised objectives. They learn to predict the next token in a sequence, acquiring broad world knowledge, reasoning ability and language skills in the process. GPT-4, Claude, Gemini and LLaMA are prominent examples. LLMs power chatbots, code assistants, document summarization, question answering and content generation at scale.
+
+Prompt Engineering
+Prompt engineering is the practice of crafting effective instructions to elicit desired outputs from large language models. A well-designed prompt provides clear context, specifies the desired format and constraints, and may include examples. Techniques include zero-shot prompting (no examples), few-shot prompting (a handful of examples), chain-of-thought prompting (asking the model to reason step by step) and role-based prompting (assigning a persona to the model).
+
+Chain-of-Thought Prompting
+Chain-of-thought prompting improves LLM reasoning by instructing the model to break problems into intermediate steps before giving a final answer. This technique dramatically improves performance on mathematical reasoning, logical deduction and multi-step question answering. Variants include zero-shot chain-of-thought (appending "Let's think step by step"), self-consistency (sampling multiple reasoning paths and selecting the most common answer) and tree-of-thought (exploring multiple reasoning branches simultaneously).
+
+Retrieval-Augmented Generation
+Retrieval-Augmented Generation (RAG) enhances LLM outputs by retrieving relevant external documents at inference time and conditioning generation on them. This allows the model to access up-to-date or domain-specific knowledge without retraining. A RAG pipeline typically consists of a document store, an embedding model, a vector database for similarity search, a retriever and a generative model. RAG reduces hallucinations and improves factual accuracy compared to relying solely on parametric knowledge.
+
+Vector Databases
+Vector databases store and index high-dimensional embedding vectors for efficient similarity search. Unlike traditional databases that use exact matching, vector databases retrieve approximate nearest neighbors using algorithms like HNSW, IVF or LSH. Popular vector databases include Pinecone, Weaviate, Chroma, Qdrant and FAISS. They are foundational infrastructure for RAG pipelines, semantic search, recommendation systems and long-term memory in AI agents.
+
+Diffusion Models
+Diffusion models are a class of generative models that learn to reverse a gradual noising process. During training the model learns to denoise images that have had Gaussian noise progressively added. At inference time the model starts from pure noise and iteratively denoises it to produce realistic images. Stable Diffusion, DALL-E 3 and Midjourney are built on diffusion principles. Diffusion models achieve state-of-the-art quality in image, audio and video generation.
+
+Generative Adversarial Networks
+Generative Adversarial Networks (GANs) consist of two neural networks trained in opposition: a generator that creates fake samples and a discriminator that distinguishes real from fake. The generator improves to fool the discriminator, while the discriminator improves at detection, resulting in increasingly realistic outputs. GANs revolutionized image synthesis before diffusion models emerged and are still used for style transfer, super-resolution, face generation and data augmentation.
+
+Variational Autoencoders
+Variational Autoencoders (VAEs) are generative models that learn a compressed latent representation of data. An encoder maps input to a distribution in latent space and a decoder reconstructs the input from a sampled latent vector. VAEs enforce a smooth, structured latent space that enables interpolation and controlled generation. They are used in image generation, molecular design and representation learning.
+
+Fine-Tuning Language Models
+Fine-tuning adapts a pre-trained LLM to a specific task or domain by continuing training on a smaller task-specific dataset. Full fine-tuning updates all model parameters and is computationally expensive. Parameter-efficient fine-tuning methods like LoRA (Low-Rank Adaptation) and prefix tuning add small trainable modules while keeping most parameters frozen, dramatically reducing cost. Instruction fine-tuning trains the model to follow natural language instructions, improving its usefulness as a general assistant.
+
+Reinforcement Learning from Human Feedback
+Reinforcement Learning from Human Feedback (RLHF) is the technique used to align LLMs with human preferences and values. First a reward model is trained on human preference ratings comparing pairs of model outputs. Then the LLM is fine-tuned using reinforcement learning to maximize the reward signal. RLHF is the key technique behind ChatGPT and Claude being helpful, harmless and honest assistants. Constitutional AI and Direct Preference Optimization are refinements of this approach.
+
+Hallucination in LLMs
+Hallucination refers to the tendency of LLMs to generate confident but factually incorrect or fabricated information. It arises because models optimize for fluency and coherence rather than factual accuracy. Mitigation strategies include RAG to ground responses in real documents, chain-of-thought reasoning, temperature reduction, self-verification prompts, external fact-checking tools and citation-grounded generation. Hallucination remains an active research challenge for deploying LLMs in high-stakes domains.
+
+Multimodal AI
+Multimodal AI systems can process and generate multiple types of data including text, images, audio and video. Vision-language models like GPT-4V and LLaVA can answer questions about images, describe visual scenes and generate captions. Models like Gemini and Claude 3 natively understand documents, charts and photographs alongside text. Multimodal AI enables richer human-computer interaction and opens applications in accessibility, healthcare and creative tools.
+
+Text-to-Image Generation
+Text-to-image models generate photorealistic or artistic images from natural language descriptions. Users provide a text prompt and the model synthesizes a matching image. Modern systems like DALL-E 3 and Stable Diffusion XL can render complex scenes, specific art styles, photorealistic portraits and imaginative concepts with high fidelity. These models have transformed graphic design, advertising, game asset creation and creative arts.
+
+Text-to-Video Generation
+Text-to-video generation extends image synthesis to temporal sequences. Models like Sora from OpenAI and Runway Gen-3 can generate short video clips from text descriptions, maintaining temporal consistency, physical plausibility and visual quality. Key challenges include maintaining scene coherence across frames, handling complex motion and generating realistic lighting and physics. Text-to-video is poised to transform film production, marketing and education.
+
+AI Content Creation Pipeline
+An AI content creation pipeline automates the end-to-end production of content using multiple AI components working together. A typical pipeline includes a planning module that breaks down user requests, a research module that retrieves relevant knowledge, a writing module powered by an LLM, an image generation module, a review module for quality control and a publishing module for formatting and distribution. Multi-agent systems enable these components to collaborate intelligently.
+
+Embeddings for Semantic Search
+Semantic search uses dense vector embeddings to find documents based on meaning rather than keyword overlap. A query is encoded into an embedding vector and the most semantically similar document embeddings are retrieved from a vector store. This enables search that understands synonyms, paraphrases and conceptual relationships. Sentence transformers like all-MiniLM and text-embedding-3 produce high-quality embeddings for RAG and semantic search applications.
+
+Context Window and Long Context Models
+The context window defines how many tokens an LLM can process in a single call. Early models supported 2048 to 4096 tokens. Modern models support 100K to 1 million tokens, enabling processing of entire books, codebases or long conversations. Techniques like sliding window attention, sparse attention and retrieval-augmented approaches help manage very long contexts. Long context is critical for document analysis, multi-turn conversations and agentic tasks that accumulate large amounts of information.
+
+AI Safety and Alignment
+AI safety focuses on ensuring that AI systems behave as intended and do not cause unintended harm. Alignment research seeks to build AI systems whose goals and values match human intentions. Key concerns include reward hacking, distributional shift, emergent deceptive behavior and misuse. Techniques such as RLHF, Constitutional AI, interpretability research and red-teaming are used to build safer AI systems. Safety is a central concern as LLMs and AI agents become more capable and autonomous.
+
+Responsible AI and Ethics
+Responsible AI development requires addressing fairness, accountability, transparency and privacy. Bias in training data can lead to discriminatory model outputs. Explainability tools help identify unfair decision patterns. Data governance ensures personal information is handled ethically. AI regulation frameworks are emerging globally, including the EU AI Act, to govern the development and deployment of high-risk AI systems. Organizations must embed ethical practices into every stage of the AI development lifecycle.
